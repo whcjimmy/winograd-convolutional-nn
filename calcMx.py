@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[15]:
-
-
 from sympy import symbols, Matrix, Poly, zeros, eye, Indexed, simplify, IndexedBase, init_printing, pprint
 from operator import mul
 from functools import reduce
@@ -60,12 +54,12 @@ def cookToomFilter(a,n,r,fractionsIn=FractionsInG):
         f[0,:] *= -1
     if fractionsIn == FractionsInG:
         AT = A(a,alpha,n).T
-        G = (A(a,alpha,r).T/f).T
+        G = (A(a,alpha,r).T*f.inv()).T
         BT = f * B(a,alpha).T
     elif fractionsIn == FractionsInA:
         BT = f * B(a,alpha).T
         G = A(a,alpha,r)
-        AT = (A(a,alpha,n)).T/f
+        AT = (A(a,alpha,n)).T*f.inv()
     elif fractionsIn == FractionsInB:
         AT = A(a,alpha,n).T
         G = A(a,alpha,r)
