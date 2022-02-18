@@ -1,4 +1,6 @@
 # winograd minimal filtering for Convolutional Neural Network
+**This repo has been updated for sympy 1.6+**.
+
 I'm going to use the Winograd’s minimal ﬁltering algorithms to introduce a new class of fast algorithms for convolutional neural networks using C and OpenBLAS. It is a first implementation of the [Fast Algorithms for Convolutional Neural Networks - Paper](https://arxiv.org/pdf/1509.09308.pdf)
 ## Theoretical Background
 The algorithm that we are going to implement relize the operation in the image below.
@@ -59,4 +61,4 @@ python createKernel.py R CHANNEL K kernel.txt
 ./test M R CHANNEL K W H kernel.txt input.txt
 ```
 # Contributing
-This project has been developed by [Me](https://github.com/istoony) and [Andrea Facchini](https://github.com/AndreF010203)
+This project was originally developed by [Antonio Gianola](https://github.com/istoony) and [Andrea Facchini](https://github.com/AndreF010203)
